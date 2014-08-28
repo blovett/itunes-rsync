@@ -67,6 +67,7 @@ td = `mktemp -d /tmp/itunes-rsync.XXXXX`.strip
 # link each track into the workspace
 print "linking files under #{td}/... "
 pl.tracks.each do |t|
+  next if !t.enabled?
   tmppath = td + "/" + t.safe_filename_without_gcd
 
   if !Dir[File.dirname(tmppath)].any?

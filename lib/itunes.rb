@@ -92,7 +92,7 @@ end
 
 class Track
   attr_accessor :album_artist, :artist, :album, :compilation, :disc_number,
-    :location, :name, :track_number
+    :location, :name, :track_number, :track_enabled
 
   def initialize(playlist, track)
     @playlist = playlist
@@ -105,10 +105,15 @@ class Track
     @location = track.location.get.path.to_s
     @name = track.name.get.to_s
     @track_number = track.track_number.get.to_i
+    @track_enabled = track.enabled.get
   end
 
   def compilation?
     @compilation
+  end
+
+  def enabled?
+    @track_enabled
   end
 
   def album_artist_or_artist
