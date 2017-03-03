@@ -81,8 +81,8 @@ puts "done."
 
 # file times don't ever seem to match up, so only check size
 puts "rsyncing to #{destdir}... "
-system("rsync", "--exclude=.audio_data", "-Lrv", "--size-only", "--progress",
-       "--delete", "#{td}/", destdir)
+system("rsync", "-Lrv", "--size-only", "--progress", "--delete", "#{td}/",
+  destdir)
 
 print "cleaning up... "
 system("rm", "-rf", td)
