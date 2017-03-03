@@ -25,8 +25,8 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-require "rubygems"
-require "appscript"
+require "bundler/setup"
+require "rb-scpt"
 $: << File.dirname(__FILE__)
 require "appscript_itunes_fix"
 

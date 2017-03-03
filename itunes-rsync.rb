@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 # Copyright (c) 2009, 2012, 2013 joshua stein <jcs@jcs.org>
 #
 # Redistribution and use in source and binary forms, with or without
